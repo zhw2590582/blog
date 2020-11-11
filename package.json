@@ -1,0 +1,30 @@
+{
+  "name": "sleepy",
+  "version": "1.0.0",
+  "description": "老赵茶馆",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "rm docs/* && parcel build index.html --public-url /sleepy/ -d docs && touch docs/.nojekyll"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "ali-oss-watch": "^1.0.0",
+    "dayjs": "^1.8.36",
+    "normalize.css": "^8.0.1",
+    "p-limit": "^3.0.2",
+    "term-web": "^1.1.8"
+  },
+  "resolutions": {
+    "parcel/browserslist": "4.14.2"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "ie > 8",
+    "not dead"
+  ]
+}

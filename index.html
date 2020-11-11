@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charSet="UTF-8" />
+    <title>老赵茶馆</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <meta name="description" content="Hi, 老赵其实不老, 一枚前端攻城狮, 不喜欢喝茶, 也不再写博客" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <style>
+        *,
+        :after,
+        :before {
+            box-sizing: border-box;
+        }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #dcdcdc;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #ccc;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background-image: url("/wallpaper.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            background-color: #fff;
+        }
+
+        #app {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+
+        .terminal {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+        }
+
+        .term {
+            pointer-events: all;
+        }
+
+        .isMobile .term{
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="terminal">
+            <div class="term"></div>
+        </div>
+    </div>
+    <img src="./watermark.png" alt="watermark" id="watermark" style="display: none;">
+    <script src="src/index.js"></script>
+    <script>
+        var isLocalhost = Boolean(
+            window.location.hostname === 'localhost' ||
+            window.location.hostname === '[::1]' ||
+            window.location.hostname.match(
+                /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
+            )
+        );
+        var _hmt = _hmt || [];
+        (function () {
+            if (!isLocalhost) {
+                var hm = document.createElement('script');
+                hm.src = 'https://hm.baidu.com/hm.js?1c0f5055781b8c6f7e0d7800a2f70f53';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(hm, s);
+            }
+        })();
+    </script>
+</body>
+
+</html>
